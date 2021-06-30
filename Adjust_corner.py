@@ -93,3 +93,78 @@ def run_this():
 
 
 run_this()
+
+
+********************************************************************
+
+import nuke
+import nukescripts
+
+
+
+def adjustCorner():
+	par = nuke.selectedNode()
+
+
+
+	nuke.knobDefault('Crop.reformat','0')
+	nuke.knobDefault('Crop.crop','1')
+
+	n = nuke.selectedNode()
+	f = nuke.frame()
+	nukescripts.autocrop(first=f,last=f)
+	dep_node = n.dependent()[0]
+	dep_node['selected'].setValue(True)
+	nuke.knobDefault('Crop.reformat','1')
+	nuke.knobDefault('Crop.crop','0')
+
+	x=nuke.selectedNode()['box'].getValue(0)
+	y=nuke.selectedNode()['box'].getValue(1)
+	r=nuke.selectedNode()['box'].getValue(2)
+	t=nuke.selectedNode()['box'].getValue(3)
+
+	nuke.delete(nuke.selectedNode())
+
+
+
+
+	c = nuke.nodes.CornerPin2D(name="Adjust_corner")
+	c.setInput(0, par)
+
+	c.knob('to1').setAnimated()
+	c.knob('to2').setAnimated()
+	c.knob('to3').setAnimated()
+	c.knob('to4').setAnimated()
+
+	c['to1'].setValue(x,0)
+	c['to1'].setValue(y,1)
+	c['to2'].setValue(x,0)
+	c['to2'].setValue(t,1)
+	c['to3'].setValue(r,0)
+	c['to3'].setValue(y,1)
+	c['to4'].setValue(r,0)
+	c['to4'].setValue(t,1)
+
+	c.knob('copy_to').execute()
+	c.knob('to1').setAnimated()
+	c.knob('to2').setAnimated()
+	c.knob('to3').setAnimated()
+	c.knob('to4').setAnimated()
+	c.knob('from1').clearAnimated()
+	c.knob('from2').clearAnimated()
+	c.knob('from3').clearAnimated()
+	c.knob('from4').clearAnimated()
+
+
+
+
+#end script
+
+
+
+
+# --------------------------------------------------------------
+# adding menu and shortcut  ::::::::::::::::::::::::::::::::::
+# --------------------------------------------------------------
+EfficiencyMenu = nuke.menu('Nuke')
+EfficiencyMenu.addCommand('Efficiency/Adjust_corner', 'Adjust_corner.adjustCorner()','F3')
