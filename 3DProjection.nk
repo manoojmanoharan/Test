@@ -1,0 +1,75 @@
+set cut_paste_input [stack 0]
+version 14.1 v5
+Camera3 {
+ inputs 0
+ name Camera1
+ note_font "DejaVu Sans"
+ selected true
+ xpos 894
+ ypos -167
+}
+set N162a6c60 [stack 0]
+push $N162a6c60
+FrameHold {
+ firstFrame 1001
+ name FrameHold1
+ note_font "DejaVu Sans"
+ selected true
+ xpos 884
+ ypos -299
+}
+push $cut_paste_input
+Dot {
+ name Dot2
+ note_font "DejaVu Sans"
+ selected true
+ xpos 1164
+ ypos -462
+}
+Project3D2 {
+ inputs 2
+ name Project3D1
+ note_font "DejaVu Sans"
+ selected true
+ xpos 1131
+ ypos -293
+}
+Card2 {
+ control_points {3 3 3 6 
+
+1 {-0.5 -0.5 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {0 0 0} 
+1 {0 -0.5 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {0.5 0 0} 
+1 {0.5 -0.5 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {1 0 0} 
+1 {-0.5 0 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {0 0.5 0} 
+1 {0 0 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {0.5 0.5 0} 
+1 {0.5 0 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {1 0.5 0} 
+1 {-0.5 0.5 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {0 1 0} 
+1 {0 0.5 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {0.5 1 0} 
+1 {0.5 0.5 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {1 1 0} }
+ name Card1
+ note_font "DejaVu Sans"
+ selected true
+ xpos 1131
+ ypos -234
+}
+push 0
+ScanlineRender {
+ inputs 3
+ conservative_shader_sampling false
+ samples {{root.scan_samples}}
+ shutter {{root.scan_shutter}}
+ shutteroffset centred
+ motion_vectors_type distance
+ name ScanlineRender1
+ note_font "DejaVu Sans"
+ selected true
+ xpos 1131
+ ypos -147
+}
+Dot {
+ name Dot3
+ note_font "DejaVu Sans"
+ selected true
+ xpos 1164
+ ypos -46
+}
