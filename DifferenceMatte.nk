@@ -1,0 +1,85 @@
+set cut_paste_input [stack 0]
+version 14.1 v5
+BackdropNode {
+ inputs 0
+ name BackdropNode1
+ tile_color 0xb80b5f
+ label "Difference Matte"
+ note_font "DejaVu Sans"
+ note_font_size 80
+ note_font_color 0xffffffff
+ selected true
+ xpos -271
+ ypos -530
+ appearance Border
+ border_width 4
+ bdwidth 699
+ bdheight 671
+}
+push $cut_paste_input
+Crop {
+ box {0 0 4552 2400}
+ reformat true
+ crop false
+ name Crop1
+ note_font "DejaVu Sans"
+ selected true
+ xpos 205
+ ypos -235
+}
+set N151764c0 [stack 0]
+Dot {
+ inputs 0
+ name Dot1
+ note_font "DejaVu Sans"
+ selected true
+ xpos 37
+ ypos -329
+}
+Difference {
+ inputs 2
+ gain 1000000000
+ name Difference1
+ note_font "DejaVu Sans"
+ selected true
+ xpos 4
+ ypos -241
+}
+Blur {
+ channels alpha
+ name Blur1
+ note_font "DejaVu Sans"
+ selected true
+ xpos 4
+ ypos -142
+}
+Shuffle2 {
+ fromInput1 {{0} B}
+ in1 alpha
+ fromInput2 {{0} B}
+ mappings "4 black -1 -1 rgba.red 0 0 black -1 -1 rgba.green 0 1 black -1 -1 rgba.blue 0 2 rgba.alpha 0 0 rgba.alpha 0 3"
+ name Shuffle1
+ label "\[value in1]-->\[value out1]"
+ note_font "DejaVu Sans"
+ selected true
+ xpos 4
+ ypos -86
+}
+push $N151764c0
+Copy {
+ inputs 2
+ from0 rgba.alpha
+ to0 rgba.alpha
+ name Copy1
+ note_font "DejaVu Sans"
+ selected true
+ xpos 205
+ ypos -86
+}
+CopyMetaData {
+ name CopyMetaData1
+ note_font "DejaVu Sans"
+ selected true
+ xpos 205
+ ypos 61
+}
