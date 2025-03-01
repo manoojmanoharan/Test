@@ -1,0 +1,482 @@
+set cut_paste_input [stack 0]
+version 14.1 v4
+push $cut_paste_input
+Group {
+name Scatter
+tile_color 0xff3800ff
+note_font "DejaVu Sans Bold"
+note_font_color 0xff2e00ff
+selected true
+xpos 7653
+ypos -3466
+addUserKnob {20 Edit}
+addUserKnob {26 text_2 l "" +STARTLINE T "<font color=\"#FF5F15\" face=\"D050000L\" size=\"40\">.</font>"}
+addUserKnob {26 bio l "" -STARTLINE T " <font color='#FF5F15' face = \"Courier 10 Pitch\"><font size=\"40\">Scatter</font> <font color='#FF5F15'>v0.7.1</font>  \n\n\n"}
+addUserKnob {26 DatasetGenerator l "" +STARTLINE T "<font color='#707070'><i> Dataset Generator\n \n\n</i>\n \n"}
+addUserKnob {26 text_1 l "   " T "   "}
+addUserKnob {26 text l Texture}
+addUserKnob {6 boolean l show -STARTLINE}
+boolean true
+addUserKnob {41 firstFrame l "sample frame" T FrameHold1.firstFrame}
+addUserKnob {41 setToCurrentFrame l "Set to Current Frame" -STARTLINE T FrameHold1.setToCurrentFrame}
+addUserKnob {41 scale T UVTile.scale}
+addUserKnob {41 translate T Transform1.translate}
+addUserKnob {41 rotate T Transform.rotate}
+addUserKnob {41 defocus T Defocus2.defocus}
+addUserKnob {41 disable_3 l "texture alpha" T Shuffle1.disable}
+addUserKnob {26 Screen}
+addUserKnob {41 color l colour T Constant1.color}
+addUserKnob {20 more l Advanced}
+addUserKnob {26 MotionBlur l "Motion Blur"}
+addUserKnob {41 amount T dirBlur_v04_1.amount}
+addUserKnob {41 angle T dirBlur_v04_1.angle}
+addUserKnob {41 disable_2 l "don't affect FG" T dirBlur_v04_2.disable}
+addUserKnob {41 disable_1 l "don't affect BG" T dirBlur_v04_1.disable}
+addUserKnob {26 text_3 l Grade}
+addUserKnob {41 blackpoint T Grade1.blackpoint}
+addUserKnob {41 whitepoint T Grade1.whitepoint}
+addUserKnob {41 black l lift T Grade1.black}
+addUserKnob {41 white l gain T Grade1.white}
+addUserKnob {41 multiply T Grade1.multiply}
+addUserKnob {41 add l offset T Grade1.add}
+addUserKnob {41 gamma T Grade1.gamma}
+addUserKnob {41 disable_5 l "don't affect FG" T Grade2.disable}
+addUserKnob {41 disable_4 l "don't affect BG" T Grade1.disable}
+addUserKnob {26 RotoEdge l "Roto Edge"}
+addUserKnob {41 ppadding l padding T Dilate1.size}
+addUserKnob {20 tab l Info}
+addUserKnob {26 JordanBooth2024 l "Author |" T "Jordan Booth"}
+addUserKnob {26 text_4 l "Version |" T 0.7.1}
+addUserKnob {26 text_5 l "Documentation |" T " <a href=\"https://confluence.lucasfilm.com/index.action\">Confluence</a>"}
+}
+BackdropNode {
+inputs 0
+name BackdropNode2
+tile_color 0xff3b00ff
+label Roto
+note_font_size 33
+xpos 1181
+ypos -494
+bdwidth 139
+bdheight 188
+}
+BackdropNode {
+inputs 0
+name BackdropNode3
+tile_color 0xff3b00ff
+label "Sample "
+note_font_size 33
+xpos -1522
+ypos -887
+bdwidth 145
+bdheight 173
+}
+BackdropNode {
+inputs 0
+name BackdropNode4
+tile_color 0xff3b00ff
+label Plate
+note_font_size 33
+xpos -918
+ypos -1628
+bdwidth 136
+bdheight 156
+}
+Input {
+inputs 0
+name InputRoto
+note_font "DejaVu Sans"
+xpos 1210
+ypos -410
+number 1
+}
+Dot {
+name Dot1
+note_font "DejaVu Sans"
+xpos 1244
+ypos -256
+}
+set Ne7c3f4c0 [stack 0]
+Dot {
+name Dot5
+note_font "DejaVu Sans"
+xpos 1444
+ypos -256
+}
+Blur {
+channels rgba
+size 2
+name Blur8
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos 1410
+ypos 940
+}
+Dot {
+name Dot4
+note_font "DejaVu Sans"
+xpos 1444
+ypos 1444
+}
+Constant {
+inputs 0
+color {0 0 0 0}
+name Constant4
+tile_color 0x222222ff
+note_font "DejaVu Sans"
+xpos 210
+ypos 1267
+}
+Merge2 {
+inputs 2
+name Merge3
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos 210
+ypos 1440
+}
+Input {
+inputs 0
+name Input
+note_font "DejaVu Sans"
+xpos -890
+ypos -1560
+}
+Constant {
+inputs 0
+color {0 0 0 0}
+name Constant2
+tile_color 0x222222ff
+note_font "DejaVu Sans"
+xpos -1090
+ypos -1283
+}
+Merge2 {
+inputs 2
+name Merge1
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos -890
+ypos -1260
+}
+set Ne7057d50 [stack 0]
+Dot {
+name Dot6
+note_font "DejaVu Sans"
+xpos -256
+ypos -1256
+}
+Copy {
+inputs 2
+from0 rgba.alpha
+to0 rgba.alpha
+name Copy4
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos -290
+ypos 1434
+}
+Premult {
+name Premult3
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos -290
+ypos 1890
+}
+dirBlur_v04 {
+name dirBlur_v04_2
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos 110
+ypos 1890
+amount {{parent.dirBlur_v04_1.amount}}
+angle {{parent.dirBlur_v04_1.angle}}
+}
+set Ncfd13510 [stack 0]
+Grade {
+blackpoint {{parent.Grade1.blackpoint}}
+whitepoint {{parent.Grade1.whitepoint}}
+black {{parent.Grade1.black}}
+white {{parent.Grade1.white}}
+multiply {{parent.Grade1.multiply}}
+add {{parent.Grade1.add}}
+gamma {{parent.Grade1.gamma}}
+name Grade2
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos 310
+ypos 1890
+}
+push $Ne7c3f4c0
+Dilate {
+size 100
+name Dilate1
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos 1210
+ypos 684
+}
+Blur {
+channels rgba
+size 15
+name Blur3
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos 1210
+ypos 940
+}
+Constant {
+inputs 0
+color {0 0 0 0}
+name Constant3
+tile_color 0x222222ff
+note_font "DejaVu Sans"
+xpos 810
+ypos 767
+}
+Merge2 {
+inputs 2
+name Merge2
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos 810
+ypos 940
+}
+Camera3 {
+inputs 0
+translate {0 0 1}
+name Camera1
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos -1080
+ypos 620
+}
+Input {
+inputs 0
+name InputSample
+note_font "DejaVu Sans"
+xpos -1490
+ypos -810
+number 2
+}
+push $Ne7057d50
+FrameHold {
+firstFrame 1001
+name FrameHold1
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos -890
+ypos -1016
+}
+Copy {
+inputs 2
+from0 rgba.alpha
+to0 rgba.alpha
+bbox A
+name Copy1
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos -890
+ypos -816
+}
+Premult {
+name Premult7
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos -890
+ypos -560
+}
+Crop {
+box {{bbox.x} {bbox.y} {bbox.r} {bbox.t}}
+reformat true
+crop false
+name Crop4
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos -890
+ypos -360
+}
+Transform {
+center {33.5 43}
+black_outside false
+shutteroffset centred
+name Transform
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos -890
+ypos -160
+}
+UVTile2 {
+tile_u 2
+tile_v 2
+wrap_u mirror
+wrap_v mirror
+scale 0.02
+name UVTile
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos -890
+ypos 90
+}
+Card2 {
+control_points {3 3 3 6 
+
+1 {-0.5 -0.5 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {0 0 0} 
+1 {0 -0.5 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {0.5 0 0} 
+1 {0.5 -0.5 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {1 0 0} 
+1 {-0.5 0 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {0 0.5 0} 
+1 {0 0 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {0.5 0.5 0} 
+1 {0.5 0 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {1 0.5 0} 
+1 {-0.5 0.5 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {0 1 0} 
+1 {0 0.5 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {0.5 1 0} 
+1 {0.5 0.5 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {1 1 0} }
+name Card1
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos -890
+ypos 290
+}
+Scene {
+name Scene1
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos -880
+ypos 470
+}
+push 0
+ScanlineRender {
+inputs 3
+conservative_shader_sampling false
+shutteroffset centred
+motion_vectors_type distance
+name ScanlineRender1
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos -890
+ypos 640
+}
+Transform {
+center {1242 452}
+shutteroffset centred
+name Transform1
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos -890
+ypos 790
+}
+Defocus {
+channels rgba
+defocus 0
+name Defocus2
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos -890
+ypos 940
+}
+dirBlur_v04 {
+name dirBlur_v04_1
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos 110
+ypos 940
+}
+Constant {
+inputs 0
+color {0.03869628906 0.04006958008 0.1622314453 1}
+name Constant1
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos 560
+ypos 317
+}
+Reformat {
+name Reformat1
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos 560
+ypos 440
+}
+Shuffle2 {
+fromInput1 {{0} B}
+fromInput2 {{0} B}
+mappings "4 rgba.red 0 0 rgba.red 0 0 rgba.green 0 1 rgba.green 0 1 rgba.blue 0 2 rgba.blue 0 2 black -1 -1 rgba.alpha 0 3"
+name Shuffle2
+tile_color 0x333333ff
+label "\[value in1]-->\[value out1]"
+note_font "DejaVu Sans"
+xpos 560
+ypos 534
+}
+Merge2 {
+inputs 2+1
+mix {{parent.boolean}}
+name Merge5
+tile_color 0x777777ff
+gl_color 0x777777ff
+note_font "DejaVu Sans"
+xpos 560
+ypos 940
+}
+Grade {
+name Grade1
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos 560
+ypos 1090
+}
+Merge2 {
+inputs 2
+name Merge6
+tile_color 0x777777ff
+note_font "DejaVu Sans"
+xpos 560
+ypos 1890
+}
+set Nc12daab0 [stack 0]
+push $Ncfd13510
+Merge2 {
+inputs 2
+operation minus
+name Merge4
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos 110
+ypos 2340
+}
+push $Nc12daab0
+Copy {
+inputs 2
+from0 rgba.alpha
+to0 rgba.alpha
+name Copy2
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos 560
+ypos 2334
+}
+Defocus {
+channels rgba
+defocus 0
+name Defocus1
+tile_color 0x333333ff
+note_font "DejaVu Sans"
+xpos 560
+ypos 2590
+}
+Shuffle2 {
+fromInput1 {{0} B}
+fromInput2 {{0} B}
+mappings "4 rgba.red 0 0 rgba.red 0 0 rgba.green 0 1 rgba.green 0 1 rgba.blue 0 2 rgba.blue 0 2 black -1 -1 rgba.alpha 0 3"
+name Shuffle1
+tile_color 0x333333ff
+label "\[value in1]-->\[value out1]"
+note_font "DejaVu Sans"
+xpos 560
+ypos 2834
+}
+Output {
+name Output1
+xpos 560
+ypos 3090
+}
+end_group
