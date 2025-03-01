@@ -1,0 +1,685 @@
+set cut_paste_input [stack 0]
+version 12.0 v8
+BackdropNode {
+ inputs 0
+ name BackdropNode2
+ tile_color 0xaaaaaa00
+ note_font_size 42
+ selected true
+ xpos -855
+ ypos 549
+ bdwidth 1006
+ bdheight 1393
+ z_order -1
+}
+BackdropNode {
+ inputs 0
+ name ep105_ewc_6970_mp01_lens_1
+ onCreate "\nfrom nuke_template_engine.helpers import tag_nodelookup_outdated\ntag_nodelookup_outdated()\n"
+ tile_color 0x35394cff
+ label ep105_ewc_6970.mp01_lens_1
+ note_font_size 42
+ selected true
+ xpos -118
+ ypos 1138
+ bdwidth 184
+ bdheight 234
+ addUserKnob {20 User}
+ addUserKnob {1 template_path}
+ template_path /lucas/ilm/qi/wgy/ilm/default/default/comp/default/template/nk/qi_layout.lensmap/2/qi_layout.lensmap.nk
+ addUserKnob {26 storage_meta -STARTLINE +INVISIBLE T "\{\"template_name\": \"qi_layout.lensmap\", \"product_uris\": \[\"lensmap_ep105_ewc_6970.mp01.zshotelem.json@wgy.ep105_ewc.ep105_ewc_6970.atlas.zshotelem:ilm#1\"], \"node_lookup\": \{\"Output2\": \"Output2\", \"lensHSOp\": \"lensHSOp1\"\}, \"template_uri\": \"qi_layout.lensmap.template.nk@wgy.default.default.comp.default:ilm#2\"\}"}
+ addUserKnob {6 nodelookup_up_to_date -STARTLINE +HIDDEN}
+ addUserKnob {1 _label l "" +STARTLINE +INVISIBLE}
+ _label ep105_ewc_6970.mp01_lens_1
+ addUserKnob {20 AssetImporter3}
+ addUserKnob {26 context_uri l context_uri: T "qi_layout/lens distortion/ep105_ewc_6970.mp01_lens/1@wgy/ep105_ewc/ep105_ewc_6970/zshotelem"}
+ addUserKnob {26 take_display_name l "take display name:" T 1}
+ addUserKnob {26 qi_metadata_divider l "" +STARTLINE}
+ addUserKnob {26 qi_metadata_label l "Qi metadata:" T " "}
+ addUserKnob {1 qimeta__metadata_schemes l _metadata_schemes}
+ qimeta__metadata_schemes zshotelem
+ addUserKnob {1 qimeta_atlas_version l atlas_version}
+ qimeta_atlas_version 1
+ addUserKnob {1 qimeta_class_name l class_name}
+ qimeta_class_name lensmap
+ addUserKnob {1 qimeta_element_name l element_name}
+ qimeta_element_name ep105_ewc_6970.mp01
+ addUserKnob {1 qimeta_entity_name l entity_name}
+ qimeta_entity_name ep105_ewc_6970.mp01_lens
+ addUserKnob {1 qimeta_file_name l file_name}
+ qimeta_file_name custom_data.json
+}
+Camera2 {
+ inputs 0
+ translate {{curve x976 3.907702446 3.905002594 3.902302742 3.899851799 3.897814751 3.896244049 3.89511013 3.894327402 3.893796444 3.893452644 3.893278599 3.893271685 3.893418074 3.893710136 3.894159317 3.894771099 3.895509481 3.896310806 3.897116184 3.897894621 3.898632765 3.899329185 3.900006533 3.900715828 3.901507378 3.90237546 3.903230429 3.90394783 3.90445447 3.904772997 3.904987097 3.905193567 3.905479193 3.905898809 3.906446934 3.907054663 3.907625675 3.908090591 3.908429384 3.908655167 3.908776283 3.908795834 3.908741474 3.908669949 3.908624411 3.908599138 3.908557415 3.908476353 3.90836525 3.908251762 3.908165693 3.908128023 3.908141851 3.908176422 3.908174038 3.908085346 3.907907963 3.907694578 3.907521248 3.907438278 3.907443047 3.907491922 3.907532454 3.907536268 3.907505512 3.907463074 3.907431841 3.907422543 3.90744257 3.907498121 3.907587767 3.907683134 3.90773654 3.907718182 3.907645702 3.907578945 3.907577515 3.907659531 3.907810688 3.908007145 3.908228397 3.908447742 3.908634901 3.908760309 3.908802509 3.908766031 3.908701181 3.908684492 3.908755064 3.908876419 3.908977985 3.909023046 3.909038305 3.909077883 3.909166813 3.909272671 3.909332275 3.909305811 3.909198284 3.909031868 3.908804893 3.908488989 3.908059597 3.907527685 3.906933784 3.906315565 3.905688763 3.905062199 3.904459953 3.903924942 3.90350914 3.903257608 3.903175831 3.903215885 3.903308868 3.903425455 3.903595448 3.903863192 3.904227972 3.904643059 3.905057907 3.905451775 3.905825138 3.906179905 3.906507969 3.906787872 3.906984568 3.907076359 3.907081604 3.907056808 3.907051563 3.907078266 3.907110691 3.907112598 3.907058954 3.906943083 3.906781435 3.906622648 3.906533241 3.906539202 3.906573772 3.906524181 3.906350374 3.906137943 3.906004429 3.90596199 3.905900002 3.905692339 3.905296564 3.904757738 3.904150963 3.903530121 3.902905226 3.902253389 3.90154767 3.900793552 3.900024891 3.899235725 3.89832449 3.897137403 3.895595074 3.893771648 3.8918643 3.890084267 3.88855648 3.887277842 3.886145592 3.885046005 3.883934021 3.882830858 3.881755829 3.880678177 3.879540443 3.878331661 3.877112627 3.875968933 3.874948025 3.874038219 3.873190641 3.872343063} {curve x976 1.156260133 1.154656291 1.153052568 1.151597381 1.150396585 1.14949286 1.148874164 1.14849937 1.148321748 1.148297191 1.148380637 1.148527503 1.14870429 1.148908734 1.149172902 1.149544597 1.150052547 1.150684476 1.151393533 1.152127147 1.152854085 1.153566122 1.154257417 1.154902816 1.155454397 1.155869722 1.156151414 1.156368732 1.156626582 1.156991124 1.157416821 1.157736063 1.157735109 1.157272577 1.156360865 1.155157804 1.153885007 1.152733088 1.151808381 1.151136279 1.150693297 1.150440335 1.150341272 1.150369525 1.150507808 1.150742412 1.15105927 1.151438832 1.151854396 1.152274013 1.152667284 1.153013706 1.153308272 1.153557539 1.153768659 1.153937459 1.154047608 1.154084086 1.154050946 1.153979063 1.153916478 1.153906584 1.153967619 1.154087424 1.15423286 1.154366732 1.154462934 1.15451324 1.154523015 1.154502749 1.154459715 1.154396415 1.154311538 1.154203057 1.154069543 1.15391171 1.153735995 1.153556466 1.153395057 1.153272986 1.153202534 1.153182268 1.153199077 1.153233171 1.1532619 1.153258443 1.153193116 1.153039217 1.152782559 1.152431369 1.152019024 1.151597381 1.151224494 1.15095222 1.150819778 1.150854111 1.151068091 1.151457787 1.151999831 1.152657866 1.153398871 1.154211164 1.155104637 1.156095266 1.157182574 1.15833354 1.159484744 1.160558939 1.161485672 1.162219286 1.162747264 1.163089395 1.163286567 1.163384318 1.163423061 1.163434386 1.163443446 1.163469434 1.16352272 1.163601518 1.163695931 1.163798451 1.163913131 1.164057612 1.16425705 1.164530635 1.164877772 1.165269732 1.165652633 1.165965676 1.166169643 1.166272998 1.16633749 1.166456819 1.166717052 1.167159796 1.167763352 1.168451428 1.169115067 1.169635534 1.169899225 1.169808984 1.169305444 1.168396235 1.167179108 1.165827155 1.164533377 1.163438559 1.162582517 1.161910295 1.161325693 1.160757184 1.160198569 1.159703612 1.159344912 1.159169912 1.159177184 1.159323454 1.159545422 1.15977633 1.159954906 1.160037518 1.160018563 1.15994966 1.159928918 1.1600492 1.160331368 1.160686135 1.160945177 1.160945535 1.160614133 1.159992576 1.159190655 1.158309817 1.157393456 1.156431913 1.155400634 1.154296041 1.153144956 1.151993752} {curve x976 -11.68038273 -11.68153 -11.68267822 -11.68370819 -11.68453789 -11.68514252 -11.68553543 -11.6857481 -11.68582726 -11.68581009 -11.68572044 -11.68556213 -11.68532372 -11.68498898 -11.68456554 -11.68408871 -11.68359947 -11.68310261 -11.6825676 -11.68196774 -11.68130875 -11.68061352 -11.67988014 -11.67907143 -11.67813492 -11.6770649 -11.67594433 -11.67494965 -11.67429066 -11.67409229 -11.6742897 -11.67459106 -11.67459774 -11.67404747 -11.67297745 -11.67167282 -11.67046452 -11.6695385 -11.66892815 -11.66858482 -11.66843414 -11.66837215 -11.66824913 -11.66791821 -11.66735268 -11.66667175 -11.66606331 -11.66565132 -11.66544914 -11.66537571 -11.66530991 -11.6651392 -11.66481018 -11.66437626 -11.66397858 -11.66374969 -11.66372108 -11.6638031 -11.66385174 -11.66376305 -11.66352654 -11.66322136 -11.66296577 -11.66283989 -11.66284275 -11.66290855 -11.66296291 -11.66297531 -11.66296005 -11.66294193 -11.66293716 -11.6629734 -11.66311264 -11.66343021 -11.66393661 -11.66454506 -11.66510582 -11.66549301 -11.66566563 -11.66566181 -11.66557503 -11.66549492 -11.66547775 -11.6655407 -11.66568184 -11.66586781 -11.66599941 -11.66594505 -11.66563797 -11.66515636 -11.66467285 -11.66431618 -11.6641016 -11.66394901 -11.66378307 -11.66360092 -11.66344738 -11.66335869 -11.6633091 -11.6632452 -11.66312218 -11.66293335 -11.66268349 -11.66236591 -11.661973 -11.66151428 -11.66102982 -11.66056061 -11.66013336 -11.65974045 -11.65935516 -11.65893936 -11.65850258 -11.65811157 -11.65783787 -11.65768623 -11.65757942 -11.65741825 -11.65715504 -11.6567955 -11.65634918 -11.65579987 -11.65514183 -11.65441799 -11.65372276 -11.65314293 -11.65272141 -11.65243626 -11.65221596 -11.65197563 -11.65166283 -11.65128708 -11.65088558 -11.65049744 -11.65013599 -11.64979935 -11.64946079 -11.64906502 -11.64855194 -11.6479311 -11.64732456 -11.64686489 -11.64652824 -11.64610958 -11.64540863 -11.64447689 -11.64362335 -11.64318085 -11.64326668 -11.64371014 -11.64418602 -11.64439011 -11.64416695 -11.64351654 -11.64252949 -11.64131451 -11.63993454 -11.63839531 -11.63665962 -11.63470554 -11.63256073 -11.63027382 -11.6278553 -11.62521935 -11.62220383 -11.61863136 -11.61438751 -11.6094923 -11.6041069 -11.59845638 -11.59269142 -11.58683395 -11.58084679 -11.57479477 -11.56892204 -11.56356335 -11.55894852 -11.55504894 -11.55158615 -11.54812431}}
+ rotate {{curve x976 -18.9054155 -18.71661029 -18.52779825 -18.35010746 -18.1870606 -18.04490899 -17.93294853 -17.8512441 -17.79326775 -17.75502211 -17.73071859 -17.71148819 -17.69391582 -17.68156684 -17.68223449 -17.69999127 -17.72703541 -17.75063883 -17.76663684 -17.77575856 -17.77971665 -17.78379428 -17.79058519 -17.79740172 -17.80183451 -17.80706644 -17.8152251 -17.82337181 -17.83029079 -17.83862533 -17.84953997 -17.85973915 -17.86837763 -17.87307339 -17.86991101 -17.86413779 -17.86190091 -17.86759558 -17.88283714 -17.90169871 -17.91641435 -17.9256095 -17.93325077 -17.9420583 -17.95147371 -17.96061251 -17.97154764 -17.98636574 -18.00449989 -18.0200915 -18.02706171 -18.02779254 -18.0269473 -18.02647431 -18.02876414 -18.03120934 -18.03021214 -18.02858314 -18.02670996 -18.02185028 -18.01609413 -18.01225898 -18.00998111 -18.00817453 -18.00439744 -17.99911087 -17.99386358 -17.98576297 -17.96864139 -17.93585649 -17.89064746 -17.84349355 -17.79981278 -17.763845 -17.73813446 -17.71965368 -17.70852047 -17.70507806 -17.70594549 -17.71149843 -17.72635409 -17.75146528 -17.7807446 -17.80553477 -17.81830552 -17.81912855 -17.81305822 -17.80324666 -17.78980484 -17.77270034 -17.75555486 -17.74153248 -17.73258152 -17.72954038 -17.72721811 -17.72390547 -17.72384058 -17.72014545 -17.70266529 -17.67084856 -17.62833917 -17.57285925 -17.49804819 -17.40398795 -17.28701754 -17.14432294 -16.98979674 -16.84733778 -16.73590324 -16.65784272 -16.60072014 -16.55341254 -16.51576795 -16.49004034 -16.47517272 -16.47117535 -16.47880126 -16.49800263 -16.52222077 -16.54110112 -16.55619243 -16.57270782 -16.58420132 -16.58168952 -16.5688573 -16.55511155 -16.54001683 -16.51940844 -16.49449362 -16.46737265 -16.44071442 -16.41924713 -16.40276247 -16.38254511 -16.35215418 -16.31285157 -16.26604257 -16.21292419 -16.16000047 -16.11288241 -16.07156148 -16.03284284 -15.99170461 -15.94834145 -15.90633066 -15.86595741 -15.82863555 -15.79501395 -15.7611806 -15.72770072 -15.69184394 -15.64355962 -15.57351262 -15.47091293 -15.32412875 -15.11806707 -14.84907885 -14.50659609 -14.08544663 -13.60489757 -13.05740156 -12.44366552 -11.77413878 -11.03310424 -10.22309503 -9.364661489 -8.468820708 -7.543413745 -6.597610983 -5.637762365 -4.68781624 -3.771791396 -2.885349809 -2.029559122 -1.216576753 -0.4433257811 0.3699384134 1.228206538 2.007850433 2.787495183} {curve x976 -30.4274853 -30.27244001 -30.1173913 -29.97580489 -29.8609655 -29.78084397 -29.73804942 -29.72488765 -29.72483642 -29.72758557 -29.73129095 -29.73400253 -29.73777963 -29.74788148 -29.76869989 -29.80708897 -29.86420643 -29.93024411 -29.9945401 -30.05116237 -30.09848875 -30.14107156 -30.18342215 -30.22370661 -30.26048717 -30.29422831 -30.32533982 -30.35433056 -30.38130639 -30.40857251 -30.43781596 -30.46714479 -30.49316098 -30.51244944 -30.52520482 -30.53544668 -30.54629644 -30.55839612 -30.57062557 -30.5813114 -30.59013259 -30.59817856 -30.60656261 -30.61450271 -30.62027763 -30.62451918 -30.62957352 -30.63689207 -30.64534443 -30.65207216 -30.65711284 -30.6612212 -30.66412062 -30.66610479 -30.67053417 -30.67915728 -30.68749694 -30.69452179 -30.69916973 -30.69911851 -30.69716166 -30.695338 -30.69346653 -30.69271179 -30.69304305 -30.69367485 -30.69467547 -30.69487696 -30.69457643 -30.69330602 -30.69034854 -30.68836779 -30.68849073 -30.68958015 -30.69190241 -30.69592198 -30.698958 -30.69952149 -30.6992756 -30.70016353 -30.70215453 -30.70370498 -30.70666245 -30.71105426 -30.71299404 -30.71415175 -30.71649451 -30.71596858 -30.71175094 -30.7073523 -30.70450753 -30.70257117 -30.70100364 -30.69896141 -30.69603468 -30.69458326 -30.69455936 -30.69405051 -30.69435787 -30.69408466 -30.69259568 -30.69116134 -30.68654071 -30.67647643 -30.65994396 -30.64013641 -30.62517488 -30.6182115 -30.61653811 -30.6174875 -30.61908918 -30.62067037 -30.62134314 -30.62070794 -30.62186565 -30.62920128 -30.64987967 -30.68727154 -30.73589225 -30.788734 -30.84118986 -30.89347154 -30.94184977 -30.97390043 -30.98594889 -30.98605134 -30.9830324 -30.98158781 -30.98033447 -30.97773217 -30.97628075 -30.97525281 -30.9726949 -30.97099077 -30.96993551 -30.96764398 -30.96344683 -30.95839249 -30.95276441 -30.94494726 -30.93650515 -30.92744149 -30.91562184 -30.90075935 -30.88017658 -30.85297535 -30.82542578 -30.80036582 -30.77726612 -30.75940517 -30.74473051 -30.72328372 -30.68817996 -30.63863377 -30.57389723 -30.49204425 -30.3922142 -30.25520744 -30.07788207 -29.88980939 -29.68754017 -29.46001291 -29.21862719 -28.98664665 -28.77274561 -28.55675454 -28.34163773 -28.14212791 -27.95927521 -27.7948162 -27.63173861 -27.47164751 -27.3523668 -27.26965833 -27.2125255 -27.18650248 -27.17550246 -27.16637733 -27.15258547 -27.1387902} {curve x976 0.4146182826 0.3799131576 0.3452041373 0.3140467886 0.2895226476 0.2735276519 0.2662901326 0.2663448809 0.2709133436 0.2767622267 0.2815504561 0.2849442597 0.2885699429 0.2946400601 0.3042260972 0.3164494944 0.3293452918 0.341393532 0.3521208244 0.3616376791 0.3703405941 0.3787588556 0.3869619929 0.3944729064 0.4011787915 0.4075895644 0.4139840088 0.4203073232 0.426876231 0.4339773332 0.4408875637 0.4461968885 0.4490326443 0.4492079347 0.4463133485 0.4399221591 0.4310718615 0.4225429562 0.4168636272 0.4144641498 0.4141106341 0.4146348511 0.4159322402 0.4186940112 0.423552757 0.4305522602 0.4393182477 0.4491929937 0.4590689136 0.4676914938 0.4745641049 0.4801884455 0.4854190364 0.4909008501 0.4968985033 0.503111841 0.5087193729 0.5129839723 0.5156185577 0.5165323623 0.5158060144 0.5142303751 0.5131420805 0.5131322621 0.5134329505 0.5129824782 0.5114801567 0.5089165413 0.5048311277 0.4987805939 0.4912076217 0.48337713 0.4767291681 0.4722069425 0.4695666475 0.4673776786 0.4642981704 0.460200804 0.4559356177 0.4526593147 0.4514282264 0.4525172147 0.4550272025 0.4575157392 0.458928788 0.4587088879 0.4564533247 0.4517874517 0.4445508929 0.4351826215 0.4251643882 0.4166563737 0.4110617817 0.4080334199 0.4063240851 0.4053975272 0.4054609199 0.4063462832 0.407239784 0.4072550985 0.405600672 0.4018175476 0.3965385851 0.391278539 0.3870414205 0.3840699414 0.3829884503 0.3849392163 0.3900610311 0.396627591 0.4023551315 0.4064665319 0.4099323993 0.4138140545 0.4184682681 0.4246189869 0.4334188585 0.4445922209 0.4560283588 0.4660286095 0.4746013507 0.4816494656 0.4855221829 0.4846877792 0.4799404242 0.4738520043 0.4689231157 0.4668226724 0.4679419696 0.4708076609 0.4729363854 0.4727147244 0.4699935344 0.4654529527 0.460219587 0.4556091026 0.45243061 0.4505182104 0.4490957168 0.4472728834 0.4439433529 0.437489091 0.4264130588 0.4104604049 0.391018058 0.3706011552 0.3518741105 0.336635825 0.3252638536 0.3166647521 0.3082407276 0.2964144418 0.2784546995 0.2541456027 0.2256222525 0.1957518342 0.1662423888 0.136276628 0.1033123742 0.06604831614 0.02632520325 -0.01215249402 -0.04623682885 -0.07463087572 -0.09771389356 -0.1163039142 -0.13073497 -0.1417623905 -0.1518529278 -0.1637616427 -0.1778682512 -0.1923702102 -0.2058612212 -0.2184968844 -0.2310154606 -0.2440355887 -0.2586062499 -0.2761030601 -0.296304892 -0.3165065105}}
+ focal {{curve x1001 61.19177189}}
+ haperture 71.80185518
+ vaperture 23.93395122
+ near 0.1000000015
+ win_scale {0.9367546595 0.9367546595}
+ focal_point 0
+ fstop 5.599999905
+ name cmmCamera2
+ selected true
+ xpos -716
+ ypos 1433
+ addUserKnob {20 User}
+ addUserKnob {1 nodeUID}
+ nodeUID cmmCamera
+ addUserKnob {43 pre_steps}
+ pre_steps "delete_if_missing_any(\['cmmCamera'])\nset_value(\"qi_uri\", \"group_uri\")"
+ addUserKnob {43 post_steps}
+ addUserKnob {43 steps}
+ steps "set_value(\"file\", 'cmmCamera')\nreplace_with_script('cmmCamera')"
+}
+Dot {
+ name Dot37
+ tile_color 0xbfbfbfff
+ selected true
+ xpos -692
+ ypos 1531
+}
+Dot {
+ name Dot38
+ label CAM
+ note_font_size 21
+ note_font_color 0xffffffff
+ selected true
+ xpos -574
+ ypos 1531
+}
+set N25578340 [stack 0]
+Dot {
+ name Dot39
+ tile_color 0xff0000ff
+ label "\n<b style=\"color:red\">\[value \[input this 0].name]</b>"
+ selected true
+ xpos -574
+ ypos 1877
+ hide_input true
+}
+Dot {
+ inputs 0
+ name Output5
+ selected true
+ xpos -34
+ ypos 1322
+ addUserKnob {20 Qi}
+ addUserKnob {26 nodeUID -STARTLINE T Output2}
+ addUserKnob {43 pre_steps}
+ pre_steps "delete_if_not_equal('settings.LENS_IMPORT_TYPE', 'lenshsop')"
+ addUserKnob {43 steps}
+ addUserKnob {43 post_steps}
+}
+set Nf29871a0 [stack 0]
+Dot {
+ name Dot40
+ tile_color 0x5ff2aff
+ label "\n<b style=\"color:green\">\[value \[input this 0].name]</b>"
+ note_font "Bitstream Vera Sans"
+ selected true
+ xpos -247
+ ypos 1593
+ hide_input true
+}
+push $N25578340
+push $N25578340
+Group {
+ name CamProject2
+ tile_color 0xe0472bff
+ label "Frame \[value fhold]"
+ selected true
+ xpos -608
+ ypos 1406
+ addUserKnob {20 CamProjection}
+ addUserKnob {3 fhold l "Project Frame"}
+ fhold {{FrameHold4.knob.first_frame}}
+ addUserKnob {26 ""}
+ addUserKnob {26 CameraAdjustment l "Camera Adjustment"}
+ addUserKnob {7 Pan}
+ addUserKnob {7 Tilt}
+ addUserKnob {7 Zrotate l "Z rotate"}
+ addUserKnob {26 ""}
+ addUserKnob {6 overonoff l "Oversize On/Off" +STARTLINE}
+ overonoff {{OversizeControl1.overonoff}}
+ addUserKnob {12 sceneres l "Scene resulotion"}
+ sceneres {{"\[python nuke.toNode('OversizeControl1').knob('format').value().width()]"} {"\[python nuke.toNode('OversizeControl1').knob('format').value().height()]"}}
+ addUserKnob {12 overres l "Oversize resolution"}
+ overres {{parent.OversizeControl1.overres.x} {parent.OversizeControl1.overres.y}}
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos -519
+  ypos 395
+ }
+ Camera2 {
+  inputs 0
+  translate {{"\[topnode parent.input0].translate(fhold)" i} {"\[topnode parent.input0].translate(fhold)" i} {"\[topnode parent.input0].translate(fhold)" i}}
+  rotate {{"\[topnode parent.input0].rotate(fhold)+Tilt" i} {"\[topnode parent.input0].rotate(fhold)-Pan" i} {"\[topnode parent.input0].rotate(fhold)-Zrotate" i}}
+  scaling {{"\[topnode parent.input0].scaling(fhold)" i} {"\[topnode parent.input0].scaling(fhold)" i} {"\[topnode parent.input0].scaling(fhold)" i}}
+  uniform_scale {{"\[topnode parent.input0].uniform_scale(fhold)" i}}
+  skew {{"\[topnode parent.input0].skew(fhold)" i} {"\[topnode parent.input0].skew(fhold)" i} {"\[topnode parent.input0].skew(fhold)" i}}
+  pivot {{"\[topnode parent.input0].pivot(fhold)" i} {"\[topnode parent.input0].pivot(fhold)" i} {"\[topnode parent.input0].pivot(fhold)" i}}
+  focal {{"\[topnode parent.input0].focal(fhold)" i}}
+  haperture {{"overonoff==0?\[topnode parent.input0].haperture(fhold):(\[topnode parent.input0].haperture(fhold)*(overres.x/sceneres.x))" i}}
+  vaperture {{"overonoff==0?\[topnode parent.input0].vaperture(fhold):(\[topnode parent.input0].vaperture(fhold)*(overres.y/sceneres.y))" i}}
+  near {{"\[topnode parent.input0].near(fhold)" i}}
+  far {{"\[topnode parent.input0].far(fhold)" i}}
+  win_translate {{"\[topnode parent.input0].win_translate(fhold)" i} {"\[topnode parent.input0].win_translate(fhold)" i}}
+  win_scale {{"\[topnode parent.input0].win_scale(fhold)" i} {"\[topnode parent.input0].win_scale(fhold)" i}}
+  winroll {{"\[topnode parent.input0].winroll(fhold)" i}}
+  focal_point {{"\[topnode parent.input0].focal_point(fhold)" i}}
+  name Camera1
+  xpos -509
+  ypos 454
+  addUserKnob {20 "FBX Switcher"}
+  addUserKnob {22 addFBXFilePath l "add FBX File Path" -STARTLINE T "\ntry:\n    original_node_list = re.search('\{(.+)\}', nuke.thisNode()\['fbx_node_name'].value()).group(1)\n    print \"onl\", original_node_list\n    nuke.thisNode()\['file'].setValue(\"/show/\[getenv SHOW]/\[getenv SEQ]/\[getenv SHOT]/layout/nuke/3d/\[getenv SHOT].layout.cameras.fbx\")\n    nuke.thisNode()\['read_from_file'].setValue(1)\n    nuke.thisNode()\['fbx_take_name'].setValue(\"Take01\")\n        \n    if  re.search(\"layoutCamera_(\\S\\S)\", nuke.thisNode().name()):\n        side_camera = \".\" + re.search(\"layoutCamera_(\\S\\S)\", nuke.thisNode().name()).group(1)\n        nuke.thisNode()\['fbx_node_name'].setValue(os.getenv('SHOT')+ \".layoutCamera\" +side_camera )\n    elif re.search(\"layoutCamera\\d+\", nuke.thisNode().name()):\n        side_camera = ''        \n        nuke.thisNode()\['fbx_node_name'].setValue(os.getenv('SHOT')+ \".layoutCamera\" +side_camera )\n    else:\n        \n        if original_node_list == \"0\":\n            print \"onl2\" ,  original_node_list\n            nuke.thisNode()\['fbx_node_name'].setValue(os.getenv('SHOT')+ \".layoutCamera\")   \n        else:\n            nuke.thisNode()\['fbx_node_name'].setValue(original_node_list)\n            \n                        \n        \n                \n            \nexcept:\n    pass            \n"}
+  addUserKnob {22 removeFBXFileAssociation l "remove FBX File Path" -STARTLINE T "\nn = nuke.thisNode()\nn\['file'].setValue('')\nn\['read_from_file'].setValue(0)\n"}
+ }
+ Output {
+  name Output1
+  xpos -519
+  ypos 555
+ }
+end_group
+push $Nf29871a0
+Dot {
+ name Dot41
+ tile_color 0x5ff2aff
+ label "\n<b style=\"color:green\">\[value \[input this 0].name]</b>"
+ note_font "Bitstream Vera Sans"
+ selected true
+ xpos -247
+ ypos 1327
+ hide_input true
+}
+Roto {
+ inputs 0
+ output alpha
+ cliptype none
+ curves {{{v x3f99999a}
+  {f 0}
+  {n
+   {layer Root
+    {f 2097664}
+    {t x44800000 x44568000}
+    {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+    {curvegroup Bezier2 512 bezier
+     {{cc
+       {f 8192}
+       {px x447a4000
+        {x40800000 x40a00000}
+        {x44e20000 x44b36000}
+        {xc0800000 xc0a00000}
+        {0 0}
+        {x44ef4000 x44b18000}
+        {0 0}
+        {0 0}
+        {x44ee8000 x44610000}
+        {0 0}
+        {0 0}
+        {x44e06d40 x4460f28f}
+        {0 0}}}
+      {cc
+       {f 8192}
+       {px x447a4000
+        {x40800000 x40a00000}
+        {xc2a1dd80 x42802510}
+        {xc0800000 xc0a00000}
+        {0 0}
+        {x42d7d210 x429b2090}
+        {0 0}
+        {0 0}
+        {x42af5c90 xc221e010}
+        {0 0}
+        {0 0}
+        {xc2ca5810 xc2146100}
+        {0 0}}}}
+     {tx x447a4000 x44e7c000 x44930800}
+     {a osw x41200000 osf 0 str 1 spx x44800000 spy x44568000 sb 1 ltn x447a4000 ltm x447a4000 tt x40800000}}
+    {curvegroup Bezier1 512 bezier
+     {{cc
+       {f 8192}
+       {px x447a4000
+        {0 0}
+        {x448c20e7 x44b35c78}
+        {0 0}
+        {0 0}
+        {x452c5dcf x44b54ea3}
+        {0 0}
+        {0 0}
+        {x45290000 xc32a0000}
+        {0 0}
+        {0 0}
+        {x44372998 xc3857ffc}
+        {0 0}}}
+      {cc
+       {f 8192}
+       {px x447a4000
+        {0 0}
+        {x42b4e680 xc2ae3330}
+        {0 0}
+        {0 0}
+        {xc2fe9980 xc377e668}
+        {0 0}
+        {0 0}
+        {0 0}
+        {0 0}
+        {0 0}
+        {x4388d124 x42b01244}
+        {0 0}}}}
+     {tx x447a4000 x44a45000 x43a50000}
+     {a osw x41200000 osf 0 str 1 spx x44800000 spy x44568000 sb 1 ltn x447a4000 ltm x447a4000 tt x40800000}}}}}}
+ toolbox {selectAll {
+  { selectAll str 1 ssx 1 ssy 1 sf 1 }
+  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 tt 4 }
+  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { brush str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { dodge src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+} }
+ toolbar_brush_hardness 0.200000003
+ toolbar_source_transform_scale {1 1}
+ toolbar_source_transform_center {1024 858}
+ colorOverlay {0 0 0 0}
+ lifetime_type "all frames"
+ lifetime_start 1001
+ lifetime_end 1001
+ motionblur_shutter_offset_type centred
+ source_black_outside true
+ name Roto26
+ note_font "Bitstream Vera Sans"
+ selected true
+ xpos -287
+ ypos 1078
+}
+Blur {
+ channels rgba
+ size 4.8
+ name Blur18
+ note_font "Bitstream Vera Sans"
+ selected true
+ xpos -287
+ ypos 1114
+}
+Dot {
+ inputs 0
+ name Dot1
+ note_font "Bitstream Vera Sans"
+ selected true
+ xpos -430
+ ypos 306
+}
+FrameHold {
+ first_frame 1001
+ name FrameHold3
+ tile_color 0xf7ff
+ selected true
+ xpos -464
+ ypos 961
+}
+Shuffle {
+ alpha white
+ name Shuffle24
+ tile_color 0x4f4f4fff
+ selected true
+ xpos -464
+ ypos 1029
+}
+set N25fde510 [stack 0]
+Dot {
+ name Dot45
+ selected true
+ xpos -430
+ ypos 1085
+}
+set N25feedc0 [stack 0]
+Merge2 {
+ inputs 2
+ operation mask
+ name Merge19
+ selected true
+ xpos -464
+ ypos 1114
+ disable {{"\[python not\\ nuke.toNode('bg_matte_dot').inputs()]"}}
+}
+set N25ff3e00 [stack 0]
+push $N25ff3e00
+Dot {
+ name Dot46
+ selected true
+ xpos -574
+ ypos 1118
+}
+push $N25feedc0
+Shuffle {
+ red black
+ green black
+ blue black
+ alpha black
+ name Shuffle25
+ tile_color 0x4f4f4fff
+ label "Original 1-1 map"
+ selected true
+ xpos -718
+ ypos 1075
+}
+Expression {
+ temp_name0 s
+ temp_expr0 width
+ temp_name1 t
+ temp_expr1 height
+ expr0 (x/s)
+ expr1 (y/t)
+ name Expression1
+ tile_color 0x4f4f4fff
+ selected true
+ xpos -718
+ ypos 1113
+}
+Expression {
+ temp_name0 s
+ temp_expr0 (1-g(width,height))/2
+ temp_name1 t
+ temp_expr1 "(1 - r(width, height))/2"
+ expr0 "r + t"
+ expr1 g+s
+ name Expression2
+ tile_color 0x4f4f4fff
+ selected true
+ xpos -718
+ ypos 1139
+}
+Shuffle {
+ alpha white
+ name Shuffle26
+ tile_color 0x4f4f4fff
+ selected true
+ xpos -718
+ ypos 1165
+}
+Copy {
+ inputs 2
+ from0 rgba.alpha
+ to0 rgba.blue
+ name Copy13
+ tile_color 0x4f4f4fff
+ selected true
+ xpos -608
+ ypos 1159
+}
+Switch {
+ inputs 2
+ name Switch1
+ tile_color 0xe0472bff
+ label "Concatenating\nON/OFF"
+ selected true
+ xpos -464
+ ypos 1153
+}
+set N26055a90 [stack 0]
+Dot {
+ name Dot47
+ selected true
+ xpos -537
+ ypos 1206
+}
+Dot {
+ name Dot48
+ selected true
+ xpos -537
+ ypos 1224
+}
+push $N26055a90
+Switch {
+ inputs 2
+ which {{OversizeControl1.overonoff}}
+ name Switch2
+ tile_color 0x4f4f4fff
+ selected true
+ xpos -464
+ ypos 1220
+}
+FrameHold {
+ first_frame {{parent.FrameHold3.knob.first_frame}}
+ name FrameHold4
+ tile_color 0xe0472bff
+ label "\n"
+ selected true
+ xpos -464
+ ypos 1246
+}
+LensHS_Distort_v03 {
+ inputs 2
+ output correction
+ name LensHS_Distort_v03_1
+ note_font "Bitstream Vera Sans"
+ selected true
+ xpos -464
+ ypos 1318
+}
+Project3D {
+ inputs 2
+ crop false
+ name Project3D1
+ tile_color 0x4f4f4fff
+ selected true
+ xpos -464
+ ypos 1412
+}
+Card2 {
+ translate {5.419117451 -0.3305544853 -15.20646667}
+ rotate {87.33983612 -40.0639534 -69.39165497}
+ scaling {30 30 1}
+ control_points {3 3 3 6 
+
+1 {-0.5 -0.5 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {0 0 0} 
+1 {0 -0.5 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {0.5 0 0} 
+1 {0.5 -0.5 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {1 0 0} 
+1 {-0.5 0 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {0 0.5 0} 
+1 {0 0 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {0.5 0.5 0} 
+1 {0.5 0 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {1 0.5 0} 
+1 {-0.5 0.5 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {0 1 0} 
+1 {0 0.5 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {0.5 1 0} 
+1 {0.5 0.5 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {1 1 0} }
+ name Card1
+ note_font "Bitstream Vera Sans"
+ selected true
+ xpos -464
+ ypos 1465
+}
+push 0
+ScanlineRender {
+ inputs 3
+ filter Mitchell
+ overscan 200
+ shutter 0
+ motion_vectors_type distance
+ name ScanlineRender1
+ tile_color 0x4f4f4fff
+ selected true
+ xpos -464
+ ypos 1527
+}
+LensHS_Distort_v03 {
+ inputs 2
+ name LensHS_Distort_v03_2
+ note_font "Bitstream Vera Sans"
+ selected true
+ xpos -464
+ ypos 1584
+}
+Dot {
+ name Dot49
+ selected true
+ xpos -430
+ ypos 1644
+}
+set N260efd10 [stack 0]
+push $N260efd10
+Dot {
+ name Dot50
+ selected true
+ xpos -563
+ ypos 1644
+}
+set N260f4c90 [stack 0]
+Shuffle {
+ red blue
+ green blue
+ alpha blue
+ name Shuffle27
+ tile_color 0x4f4f4fff
+ selected true
+ xpos -597
+ ypos 1681
+}
+push $N260f4c90
+Shuffle {
+ out forward
+ name Shuffle28
+ tile_color 0x4f4f4fff
+ selected true
+ xpos -735
+ ypos 1640
+}
+push $N25fde510
+Dot {
+ name Dot51
+ selected true
+ xpos -811
+ ypos 1033
+}
+FrameHold {
+ first_frame {{FrameHold4.knob.first_frame}}
+ name FrameHold5
+ selected true
+ xpos -845
+ ypos 1149
+}
+Clamp {
+ maximum_enable false
+ name Clamp1
+ tile_color 0x4f4f4fff
+ selected true
+ xpos -845
+ ypos 1639
+}
+Log2Lin {
+ operation lin2log
+ name Log2Lin1
+ tile_color 0x4f4f4fff
+ selected true
+ xpos -845
+ ypos 1677
+}
+STMap {
+ inputs 2
+ uv forward
+ filter Rifman
+ name STMap1
+ tile_color 0x4f4f4fff
+ label "Alignment is applied here"
+ selected true
+ xpos -735
+ ypos 1665
+}
+Log2Lin {
+ name Log2Lin2
+ tile_color 0x4f4f4fff
+ selected true
+ xpos -735
+ ypos 1715
+}
+Clamp {
+ maximum_enable false
+ name Clamp2
+ tile_color 0x4f4f4fff
+ selected true
+ xpos -735
+ ypos 1741
+}
+Merge2 {
+ inputs 2
+ operation mask
+ name Merge20
+ tile_color 0x4f4f4fff
+ selected true
+ xpos -597
+ ypos 1748
+}
+Switch {
+ inputs 2
+ which {{parent.Switch1.which}}
+ name Switch3
+ tile_color 0x4f4f4fff
+ selected true
+ xpos -464
+ ypos 1748
+}
+MotionBlur3D {
+ inputs 2
+ Z depth.Z
+ name MotionBlur3D1
+ selected true
+ xpos -464
+ ypos 1873
+ disable true
+}
+VectorBlur {
+ uv motion
+ scale {{curve x1051 1}}
+ name VectorBlur1
+ selected true
+ xpos -464
+ ypos 1906
+ disable true
+}
+StickyNote {
+ inputs 0
+ name StickyNote1
+ label cleanplate
+ note_font "Bitstream Vera Sans"
+ selected true
+ xpos -337
+ ypos 305
+}
+StickyNote {
+ inputs 0
+ name StickyNote2
+ label "Grade and filter"
+ note_font "Bitstream Vera Sans"
+ selected true
+ xpos -317
+ ypos 700
+}
+StickyNote {
+ inputs 0
+ name StickyNote3
+ label "Lens data"
+ note_font "Bitstream Vera Sans"
+ selected true
+ xpos -75
+ ypos 1394
+}
+StickyNote {
+ inputs 0
+ name StickyNote4
+ label "Adjust cornerpin"
+ note_font "Bitstream Vera Sans"
+ selected true
+ xpos -319
+ ypos 1805
+}
